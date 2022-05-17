@@ -14,6 +14,10 @@
     0%{background-position: left;}
     100%{background-position: right;}
 }
+@-webkit-keyframes gradiant-animation {
+    0%{background-position: left;}
+    100%{background-position: right;}
+}
 body,html{
     display: flex;
     justify-content: center;
@@ -27,7 +31,12 @@ body>div{
     padding: 20px;
     background-image: var(--gradiant);
     background-size: 300%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    -ms-background-clip: text;
     background-clip: text;
     color: transparent;
-    animation: gradiant-animation 5s ease-in-out alternate infinite
+    -webkit-animation:  gradiant-animation 5s ease-in-out alternate infinite;
+    animation: gradiant-animation 5s ease-in-out alternate infinite;
 }
