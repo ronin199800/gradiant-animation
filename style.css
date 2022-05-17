@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Goldman&family=Nunito&display=swap');
+:root{
+    --gradiant: linear-gradient(
+        45deg,
+        #845ec2,
+        #d65db1,
+        #ff6f91,
+        #ff9671,
+        #ffc75f,
+        #f9f871
+    ); 
+}
+@keyframes gradiant-animation {
+    0%{background-position: left;}
+    100%{background-position: right;}
+}
+body,html{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: 'Alfa Slab One', cursive;
+    background-color: #2b2d42;
+}
+body>div{
+    font-size: 3.7em;
+    padding: 20px;
+    background-image: var(--gradiant);
+    background-size: 300%;
+    background-clip: text;
+    color: transparent;
+    animation: gradiant-animation 5s ease-in-out alternate infinite
+}
